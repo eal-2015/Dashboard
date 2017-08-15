@@ -11,6 +11,43 @@
   <PropertyGroup>
     <UserSecretsId>aspnet-Dashboard-3c671238-95ff-4978-aa00-0169ccc7b0f9</UserSecretsId>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="wwwroot\css\site.css" />
+    <Content Include="wwwroot\lib\dashboard\AdminLTE.css" />
+    <Content Include="wwwroot\lib\dashboard\AdminLTE.min.css" />
+    <Content Include="wwwroot\lib\dashboard\app.js" />
+    <Content Include="wwwroot\lib\dashboard\app.min.js" />
+    <Content Include="wwwroot\lib\dashboard\img\avatar.png" />
+    <Content Include="wwwroot\lib\dashboard\img\avatar04.png" />
+    <Content Include="wwwroot\lib\dashboard\img\avatar2.png" />
+    <Content Include="wwwroot\lib\dashboard\img\avatar3.png" />
+    <Content Include="wwwroot\lib\dashboard\img\avatar5.png" />
+    <Content Include="wwwroot\lib\dashboard\img\boxed-bg.jpg" />
+    <Content Include="wwwroot\lib\dashboard\img\boxed-bg.png" />
+    <Content Include="wwwroot\lib\dashboard\img\default-50x50.gif" />
+    <Content Include="wwwroot\lib\dashboard\img\icons.png" />
+    <Content Include="wwwroot\lib\dashboard\img\photo1.png" />
+    <Content Include="wwwroot\lib\dashboard\img\photo2.png" />
+    <Content Include="wwwroot\lib\dashboard\img\user1-128x128.jpg" />
+    <Content Include="wwwroot\lib\dashboard\img\user2-160x160.jpg" />
+    <Content Include="wwwroot\lib\dashboard\img\user3-128x128.jpg" />
+    <Content Include="wwwroot\lib\dashboard\img\user4-128x128.jpg" />
+    <Content Include="wwwroot\lib\dashboard\img\user5-128x128.jpg" />
+    <Content Include="wwwroot\lib\dashboard\img\user6-128x128.jpg" />
+    <Content Include="wwwroot\lib\dashboard\img\user7-128x128.jpg" />
+    <Content Include="wwwroot\lib\dashboard\img\user8-128x128.jpg" />
+    <Content Include="wwwroot\lib\dashboard\MainStyle.css" />
+    <Content Include="wwwroot\lib\dashboard\MainStyle.min.css" />
+    <Content Include="wwwroot\lib\dashboard\skins\skin-green.css" />
+    <Content Include="wwwroot\lib\dashboard\skins\skin-green.min.css" />
+    <Content Include="wwwroot\lib\dashboard\skins\skin-odense-default.css" />
+    <Content Include="wwwroot\lib\dashboard\skins\skin-purple.min.css" />
+    <Content Include="wwwroot\lib\dashboard\skins\skin-red.min.css" />
+    <Content Include="wwwroot\lib\dashboard\skins\skin-yellow.min.css" />
+    <Content Include="wwwroot\lib\dashboard\skins\_all-skins.css" />
+    <Content Include="wwwroot\lib\dashboard\skins\_all-skins.min.css" />
+  </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.0.0" />
     <PackageReference Include="Microsoft.AspNetCore" Version="1.1.2" />
@@ -35,6 +72,7 @@
     <DotNetCliToolReference Include="Microsoft.DotNet.Watcher.Tools" Version="1.0.0" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Helper\" />
     <Folder Include="Helper\" />
     <Folder Include="wwwroot\scripts\" />
   </ItemGroup>
