@@ -13,6 +13,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Include="Scripts\init.ts" />
     <Content Include="wwwroot\css\site.css" />
     <Content Include="wwwroot\lib\dashboard\AdminLTE.css" />
     <Content Include="wwwroot\lib\dashboard\AdminLTE.min.css" />
@@ -47,6 +48,7 @@
     <Content Include="wwwroot\lib\dashboard\skins\skin-yellow.min.css" />
     <Content Include="wwwroot\lib\dashboard\skins\_all-skins.css" />
     <Content Include="wwwroot\lib\dashboard\skins\_all-skins.min.css" />
+    <Content Include="wwwroot\scripts\init.ts" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.0.0" />
@@ -74,7 +76,6 @@
   <ItemGroup>
     <Folder Include="Helper\" />
     <Folder Include="Helper\" />
-    <Folder Include="wwwroot\scripts\" />
   </ItemGroup>
 
 </Project>
