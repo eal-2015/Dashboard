@@ -13,6 +13,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="wwwroot/scripts\init.js" />
+    <Content Remove="wwwroot/scripts\init.js.map" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Content Include="wwwroot\css\site.css" />
     <Content Include="wwwroot\lib\dashboard\AdminLTE.css" />
     <Content Include="wwwroot\lib\dashboard\AdminLTE.min.css" />
@@ -74,6 +79,7 @@
   <ItemGroup>
     <Folder Include="Helper\" />
     <Folder Include="Helper\" />
+    <Folder Include="wwwroot\scripts\" />
     <Folder Include="wwwroot\scripts\" />
   </ItemGroup>
 

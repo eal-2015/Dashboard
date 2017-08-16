@@ -1,4 +1,4 @@
-@charset "UTF-8";
+﻿@charset "UTF-8";
 /**
  * Pure css masonary grid
  *
@@ -21,7 +21,8 @@
  */
 .lt-container {
   position: relative;
-  width: 100%; }
+  width: 100%;
+}
 
 .lt {
   position: absolute; }

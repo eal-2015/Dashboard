@@ -19,6 +19,9 @@ namespace Dashboard
     {
         public Startup(IHostingEnvironment env)
         {
+            //Run in Dev mode - Remove for production
+            env.EnvironmentName = "Development";
+
             var builder = new ConfigurationBuilder()
                 .SetBasePath(env.ContentRootPath)
                 .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
