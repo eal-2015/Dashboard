@@ -15,11 +15,10 @@
             </div>
         </form>
         <!-- /.search form -->
-
         <!-- sidebar menu: : style can be found in sidebar.less -->
         <ul class="sidebar-menu">
             <li class="header">Menu</li>
-            <li class="active treeview">
+            <li class="treeview">
                 <a href="#">
                     <i class="fa fa-dashboard"></i> <span>Dashboard</span> <i class="fa fa-angle-left pull-right"></i>
                 </a>
@@ -28,48 +27,47 @@
                     <li><a href="index2.html"><i class="fa fa-circle-o"></i> Dashboard 2</a></li>
                 </ul>
             </li>
-           
+
             <li class="treeview">
                 <a href="#">
-                    <i class="fa fa-th"></i>
-                    <span>Widgets</span>
+                    <i class="fa fa-thumb-tack"></i>
+                    <span>Aktive Widgets</span>
                     <i class="fa fa-angle-left pull-right"></i>
                 </a>
                 <ul class="treeview-menu">
-                    <li><a href="#" onclick="initDashboard()"><i class="fa fa-circle-o"></i> Map</a></li>
-                    <li><a href="index.html"><i class="fa fa-circle-o"></i> Flot</a></li>
-                    <li><a href="index.html"><i class="fa fa-circle-o"></i> Inline charts</a></li>
+                    <li><a href="#" onclick="initDashboard()"><i class="fa fa-circle-o"></i> Stations Kort <i class="fa fa-trash pull-right" onclick="alert('hello');"></i></a></li>
+                    <li><a href="#" onclick=""><i class="fa fa-circle-o"></i> Small Module <i class="fa fa-trash pull-right" onclick="alert('hello');"></i></a></li>
+                    <li><a href="#" onclick=""><i class="fa fa-circle-o"></i> Medium Module <i class="fa fa-trash pull-right" onclick="alert('hello');"></i></a></li>
+                    <li><a href="#" onclick=""><i class="fa fa-circle-o"></i> Large Module <i class="fa fa-trash pull-right" onclick="alert('hello');"></i></a></li>
                 </ul>
             </li>
-          
             <li class="treeview">
                 <a href="#">
-                    <i class="fa fa-share"></i> <span>Widgets</span>
+                    <i class="fa fa-th"></i> <span>Alle Widgets</span>
                     <i class="fa fa-angle-left pull-right"></i>
                 </a>
                 <ul class="treeview-menu">
-                    <li><a href="#"><i class="fa fa-circle-o"></i> Level One</a></li>
+                    <li>
+                        <a href="#"><i class="fa fa-circle-o"></i> Test Moduler <i class="fa fa-angle-left pull-right"></i></a>
+                        <ul class="treeview-menu">
+                            <li><a href="#"><i class="fa fa-circle-o"></i> Small Module</a></li>
+                            <li><a href="#"><i class="fa fa-circle-o"></i> Medium Module</a></li>
+                            <li><a href="#"><i class="fa fa-circle-o"></i> Large Module</a></li>
+                        </ul>
+                    </li>
                     <li>
                         <a href="#"><i class="fa fa-circle-o"></i> Kort Oversigt <i class="fa fa-angle-left pull-right"></i></a>
                         <ul class="treeview-menu">
-                            <li><a href="#" onclick="initDashboard()"><i class="fa fa-circle-o"></i> Alle Stationer</a></li>
-                            <li>
-                                <a href="#"><i class="fa fa-circle-o"></i> Level Two <i class="fa fa-angle-left pull-right"></i></a>
-                                <ul class="treeview-menu">
-                                    <li><a href="#"><i class="fa fa-circle-o"></i> Level Three</a></li>
-                                    <li><a href="#"><i class="fa fa-circle-o"></i> Level Three</a></li>
-                                </ul>
-                            </li>
+                            <li><a href="#" onclick="initDashboard()"><i class="fa fa-circle-o"></i> Stations Kort</a></li>
                         </ul>
                     </li>
-                    <li><a href="#"><i class="fa fa-circle-o"></i> Level One</a></li>
                 </ul>
-            </li>       
+            </li>
         </ul>
-  
-@* NEED fix *@
+
+        @* NEED fix *@
         <div class="navbar-left navbar-brand test">
-           <img src="~/images/logoNoTextTransparent.png" class="img-responsive" />
+            <img src="~/images/logoNoTextTransparent.png" class="img-responsive" />
         </div>
     </section>
     <!-- /.sidebar -->
