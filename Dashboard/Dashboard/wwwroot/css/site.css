@@ -1,1 +1,18 @@
-﻿
+/*Logo header - top menu*/
+.custom-logo {
+    background-image: url(/images/logo-service.png);
+    background-repeat: no-repeat;
+    background-position:center; 
+}
+
+@media only screen and (min-width : 992px) {
+    .custom-logo {
+
+    }
+
+}
+/*End - Log header  */
+
+.test {
+    margin-top: 370px;
+}
