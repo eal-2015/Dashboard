@@ -1,4 +1,4 @@
-function test() {
+function initDashboard() {
     var run = new Dashboard();
     run.InsertWidgets();
 }
@@ -8,27 +8,13 @@ var WidgetSize;
     WidgetSize[WidgetSize["medium"] = 2] = "medium";
     WidgetSize[WidgetSize["large"] = 3] = "large";
 })(WidgetSize || (WidgetSize = {}));
-var MapWidget = (function () {
-    function MapWidget() {
-        this.GenerateMarkup = function () {
-            return "<style>#map {height: 400px; width: 100%;} </style><h3>My Google Maps Demo</h3> <div id='map'> </div><script>function initMap() {var uluru = { lat: -25.363, lng: 131.044 };var map = new google.maps.Map(document.getElementById('map'), {zoom: 4,center: uluru});var marker = new google.maps.Marker({position: uluru,map: map});}</script> <script async defer src= 'https://maps.googleapis.com/maps/api/js?key=AIzaSyAqg1BzcJOAGeLAIbA5tgrHBWtrfc6Rx5U&callback=initMap'> </script>";
-        };
-        this.title = "Stations Kort";
-        this.size = WidgetSize.large;
-        this.innerhtml = this.GenerateMarkup();
-    }
-    return MapWidget;
-}());
 var Dashboard = (function () {
     function Dashboard() {
         this.widgets = [new MapWidget()];
     }
     Dashboard.prototype.InsertWidgets = function () {
         var markup = this.GenerateWidgets();
-        var element = document.querySelector("#grid-container");
-        if (element) {
-            element.innerHTML += markup;
-        }
+        $("#grid-container").append(markup);
     };
     Dashboard.prototype.GenerateWidgets = function () {
         var markup = "";
@@ -78,4 +64,18 @@ var Dashboard = (function () {
     };
     return Dashboard;
 }());
-//# sourceMappingURL=Widget.js.map
+//<-----------------------
+//Widget Map implementation
+var MapWidget = (function () {
+    function MapWidget() {
+        this.GenerateMarkup = function () {
+            return "<style>#map {height: 400px; width: 100%;} </style><div id='map'> </div><script>function initMap() {var uluru = { lat: -25.363, lng: 131.044 };var map = new google.maps.Map(document.getElementById('map'), {zoom: 4,center: uluru});var marker = new google.maps.Marker({position: uluru,map: map});}</script> <script async defer src= 'https://maps.googleapis.com/maps/api/js?key=AIzaSyAqg1BzcJOAGeLAIbA5tgrHBWtrfc6Rx5U&callback=initMap'> </script>";
+        };
+        this.title = "Stations Kort";
+        this.size = WidgetSize.large;
+        this.innerhtml = this.GenerateMarkup();
+    }
+    return MapWidget;
+}());
+//<----------------------
+//# sourceMappingURL=widget.js.map

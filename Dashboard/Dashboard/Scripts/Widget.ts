@@ -1,8 +1,9 @@
-﻿function test() {
+﻿function initDashboard() {
     var run = new Dashboard();
     run.InsertWidgets();
 }
 
+//Widget & Dashboard----->
 interface IWidget {
     title: string;
     size: WidgetSize;
@@ -14,37 +15,16 @@ enum WidgetSize {
     medium,
     large
 }
-
-class MapWidget implements IWidget {
-    title: string;
-    size: WidgetSize;
-    innerhtml: string;
-
-    constructor() {
-        this.title = "Stations Kort";
-        this.size = WidgetSize.large;
-        this.innerhtml = this.GenerateMarkup();
-    }
-
-    GenerateMarkup = (): string => {
-        return "<style>#map {height: 400px; width: 100%;} </style><h3>My Google Maps Demo</h3> <div id='map'> </div><script>function initMap() {var uluru = { lat: -25.363, lng: 131.044 };var map = new google.maps.Map(document.getElementById('map'), {zoom: 4,center: uluru});var marker = new google.maps.Marker({position: uluru,map: map});}</script> <script async defer src= 'https://maps.googleapis.com/maps/api/js?key=AIzaSyAqg1BzcJOAGeLAIbA5tgrHBWtrfc6Rx5U&callback=initMap'> </script>";
-    }
-}
-
 class Dashboard {
     widgets: IWidget[];
 
     constructor() {
-        this.widgets = [ new MapWidget() ]
+        this.widgets = [new MapWidget()]
     }
 
     InsertWidgets() {
         var markup = this.GenerateWidgets();
-
-        var element = document.querySelector("#grid-container");
-        if (element) {
-            element.innerHTML += markup;
-        }
+        //$("#grid-container").append(markup);
     }
 
     GenerateWidgets() {
@@ -91,10 +71,28 @@ class Dashboard {
             "</div>" +
             "<div class='box-body'> " +
             innerhtml +
-            
             "</div>" +
             "</div>" +
             "</div>";
     }
 }
+//<-----------------------
+
+//Widget Map implementation
+class MapWidget implements IWidget {
+    title: string;
+    size: WidgetSize;
+    innerhtml: string;
+
+    constructor() {
+        this.title = "Stations Kort";
+        this.size = WidgetSize.large;
+        this.innerhtml = this.GenerateMarkup();
+    }
+
+    GenerateMarkup = (): string => {
+        return "<style>#map {height: 400px; width: 100%;} </style><div id='map'> </div><script>function initMap() {var uluru = { lat: -25.363, lng: 131.044 };var map = new google.maps.Map(document.getElementById('map'), {zoom: 4,center: uluru});var marker = new google.maps.Marker({position: uluru,map: map});}</script> <script async defer src= 'https://maps.googleapis.com/maps/api/js?key=AIzaSyAqg1BzcJOAGeLAIbA5tgrHBWtrfc6Rx5U&callback=initMap'> </script>";
+    }
+}
+//<----------------------
 
