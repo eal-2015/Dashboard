@@ -186,9 +186,9 @@ var LTGrid = (function ($) {
     }
 
     var Default = {
-        resize: false,
+        resize: true,
         overlap: false,
-        compact: false,
+        compact: true,
         params: {
             lg: {
                 gap: 1,
