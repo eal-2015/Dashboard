@@ -14,7 +14,7 @@ var Dashboard = (function () {
     }
     Dashboard.prototype.InsertWidgets = function () {
         var markup = this.GenerateWidgets();
-        $("#grid-container").append(markup);
+        //$("#grid-container").append(markup);
     };
     Dashboard.prototype.GenerateWidgets = function () {
         var markup = "";
@@ -78,4 +78,4 @@ var MapWidget = (function () {
     return MapWidget;
 }());
 //<----------------------
-//# sourceMappingURL=widget.js.map
+//# sourceMappingURL=Widget.js.map
