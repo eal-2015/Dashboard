@@ -13,6 +13,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="Views\Shared\_DashboardLeftMenu.cshtml" />
     <Content Remove="wwwroot/scripts\init.js" />
     <Content Remove="wwwroot/scripts\init.js.map" />
   </ItemGroup>
