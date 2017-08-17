@@ -5,13 +5,13 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 
 
-namespace AdminLteMvc.Controllers
+namespace Dashboard.Controllers
 {
     /// <summary>
     /// This is an example controller using the AdminLTE NuGet package's CSHTML templates, CSS, and JavaScript
     /// You can delete these, or use them as handy references when building your own applications
     /// </summary>
-    public class AdminLteController : Controller
+    public class DashboardController : Controller
     {
         /// <summary>
         /// The home page of the AdminLTE demo dashboard, recreated in this new system

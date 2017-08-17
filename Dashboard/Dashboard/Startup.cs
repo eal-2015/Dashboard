@@ -84,7 +84,7 @@ namespace Dashboard
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=AdminLte}/{action=Index}/{id?}");
+                    template: "{controller=Dashboard}/{action=Index}/{id?}");
             });
         }
     }
